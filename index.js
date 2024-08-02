@@ -20,57 +20,42 @@ function debitTransaction(){
 }
 
 document.addEventListener('DOMContentLoaded', (event) => {
-    // Select the button and the link
     let debitPinBtn = document.querySelector(".debitPinBtn");
     let redirectLink = document.getElementById("redirectLink");
     let debitPinInput = document.querySelector(".debitPin");
 
     debitPinBtn.addEventListener('click', function(event) {
-        // Prevent the default action of the button if the PIN is incorrect
         event.preventDefault();
-        
-        // Get the PIN input value and trim any extra spaces
         let debitPin = debitPinInput.value.trim();
         
-        // Define the correct PIN as a string
+       
         const correctPin = '0000';
         
-        // Check if the entered PIN matches the correct PIN
         if (debitPin === correctPin) {
-            // PIN is correct, proceed with the redirect
             window.location.href = redirectLink.href;
         } else {
-            // PIN is incorrect, display a message instead of redirecting
             alert("Incorrect PIN!  Please try again.");
-            debitPinInput.value = ''; // Optionally clear the input field
+            debitPinInput.value = ''; 
         }
     });
 });
 
 document.addEventListener('DOMContentLoaded', (event) => {
-    // Select the button and the link
+    
     let debitPinBtn1 = document.querySelector(".debitPinBtn1");
     let redirectLink1 = document.getElementById("redirectLink1");
     let debitPinInput1 = document.querySelector(".debitPin1");
 
     debitPinBtn1.addEventListener('click', function(event) {
-        // Prevent the default action of the button if the PIN is incorrect
+        
         event.preventDefault();
-        
-        // Get the PIN input value and trim any extra spaces
         let debitPin1 = debitPinInput1.value.trim();
-        
-        // Define the correct PIN as a string
         const correctPin1 = '0000';
-        
-        // Check if the entered PIN matches the correct PIN
         if (debitPin1 === correctPin1) {
-            // PIN is correct, proceed with the redirect
             window.location.href = redirectLink1.href;
         } else {
-            // PIN is incorrect, display a message instead of redirecting
             alert("Incorrect PIN!  Please try again.");
-            debitPinInput1.value = ''; // Optionally clear the input field
+            debitPinInput1.value = ''; 
         }
     });
 });

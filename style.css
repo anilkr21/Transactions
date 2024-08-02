@@ -1,6 +1,7 @@
 body{
     position: relative;
    display: inline;
+   overflow-x: hidden;
 }
 #homeBody{
     
@@ -20,7 +21,8 @@ body{
 
 .navContainer{
     position: fixed;
-    width: 100%;
+    z-index: 999;
+    top:0;
     background-color: #ED1C24;
 }
 
@@ -61,7 +63,6 @@ body{
     background-color: #003874;
     border-radius: 8px;
     padding:10px;
-    height: 400px;
     text-decoration: none;
    
     
@@ -82,19 +83,15 @@ body{
 }
 .footer1
 {
-    height: 300px;
+    height: 200px;
     position: relative;
     display: flex;
-    justify-content: space-around;
-    align-items: end;
-    padding-left: 200px;
-    
+    padding-bottom: 20px;
+    top:110px;
+    background-color: lightgray;
 }
 .lastrow{
-
     display: flex;
-    justify-content: space-between;
-    align-items: end;
 }
 .lastrow1:hover{
     color: #0152a9;
